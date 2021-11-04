@@ -11,5 +11,7 @@ app.post('/tasks', taskController.registerTask); // registra a tarefa
 
 app.get('/tasks', taskController.getAllTasks); // busca todas as tarefas
 
+app.put('tasks/:id', taskController.editTask); // edita tarefa
+
 
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}`));
