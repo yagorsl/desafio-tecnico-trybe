@@ -3,6 +3,7 @@ const taskModel = require('../models/taskModel');
 
 const OK = 200;
 const CREATED = 201;
+const NO_CONTENT = 204;
 const BAD_REQUEST = 400;
 const NOT_FOUND = 404;
 
@@ -27,4 +28,27 @@ const getAllTasks = async (_req, res) => {
   return res.status(OK).json(tasks);
 }
 
-module.exports = { registerTask, getAllTasks };
+const editTask = async (req, res) => {
+  const { task } = req.body;
+  const { id } = req.params;
+  const { message } = await taskService.editTaskValidation(task, id);
+
+  if (message) {
+    return res.status(BAD_REQUEST).json({ message })
+  }
+
+  return res.status(OK).json({ _id: id, task })
+};
+
+const delTask = async (req, res) => {
+  const { id } = req.params;
+  const { message } = await taskService.delTaskValidation(id);
+
+  if (message) {
+    return res.status(BAD_REQUEST).json({ message });
+  }
+
+  return res.status(NO_CONTENT).json(id);
+}
+
+module.exports = { registerTask, getAllTasks, editTask, delTask };

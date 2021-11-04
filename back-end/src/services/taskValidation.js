@@ -17,6 +17,28 @@ const registerTaskValidation = async ({ task }) => {
 
   const { id } = await taskModel.registerTask({ task });
   return { task, id };
+};
+
+const editTaskValidation = async (task, id) => {
+  const updatedTask = await taskModel.editTask(task, id);
+
+  if (!updatedTask) {
+    return { message: 'task not found' };
+  }
+
+  return (task, id );
+};
+
+const delTaskValidation = async (id) => {
+  const taskToDelete = await taskModel.delTask(id);
+
+  if (!taskToDelete) {
+    return { message: 'task not found' }
+  }
+
+  return taskToDelete;
 }
 
-module.exports = { registerTaskValidation };
+
+
+module.exports = { registerTaskValidation, editTaskValidation, delTaskValidation };
