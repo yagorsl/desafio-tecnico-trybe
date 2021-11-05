@@ -3,8 +3,8 @@ Este repositório armazena o código back-end desenvolvido para o projeto de lis
 
 # O que foi desenvolvido?
 
-Nesse projeto, foi desenvolvida uma API com os endpoints necessários para fazer um CRUD de uma lista de tarefas. 
-O código permite que você crie uma nova tarefa, busque todas as tarefas registradas, edite e delete uma tarefa existente.
+Nesse projeto, foi desenvolvida uma API com os endpoints necessários para fazer um CRUD de uma lista de tarefas e também para um usuário realizar um login. 
+O código permite que você crie um usuário, faça login com esse usuário, além de criar uma nova tarefa, buscar todas as tarefas registradas, editar e deletar uma tarefa existente.
 
 # Como foi desenvolvido?
 
