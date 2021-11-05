@@ -14,7 +14,7 @@ O código foi desenvolvido com JavaScript, Node.js, Express e MongoDB.
 
 Para rodar o projeto em sua máquina, é necessário que você tenha configurado o seu acesso ao MongoDB e possuir o Insomnia, Postman ou outro software parecido para que você consiga simular as requisições. 
 Feita essa verificação:
-- Clone o projeto com o comando `git clone https://github.com/tryber/sd-010-b-project-webchat.git`;
+- Clone o projeto com o comando `git@github.com:yagorsl/desafio-tecnico-trybe.git`;
 - Abra a raiz do projeto e execute o script com `npm run dev`;
 - Utilize o Insomnia ou Postman para fazer as requisições.
 
