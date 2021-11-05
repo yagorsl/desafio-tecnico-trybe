@@ -12,7 +12,7 @@ const registerTask = async (req, res) => {
   const registeredTask = await taskService.registerTaskValidation(task);
 
   if (!registeredTask) {
-    return res.status(BAD_REQUEST).json({ message: 'Campos inválidos' });
+    return res.status(BAD_REQUEST).json({ message: 'Invalid fields' });
   };
 
   return res.status(CREATED).json(registeredTask);
@@ -22,7 +22,7 @@ const getAllTasks = async (_req, res) => {
   const tasks = await taskModel.getAllTasks(); 
 
   if (!tasks) {
-    return res.status(NOT_FOUND).json({ message: 'recipes not found' });
+    return res.status(NOT_FOUND).json({ message: 'tasks not found' });
   }
 
   return res.status(OK).json(tasks);
